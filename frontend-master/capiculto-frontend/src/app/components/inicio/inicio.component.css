@@ -1,0 +1,39 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400&display=swap');
+
+.content{
+    margin-top: 50px;
+    width: 100%;
+    margin: auto; /* Centramos los elementos */
+    overflow: hidden; /* Eliminamos errores de float */
+    padding-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.image{
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 50px;
+}
+.titulo{
+    font-family: 'Redressed';
+    color:#fcaf03;
+    font-size: 80px;
+}
+.texto{
+    font-family: 'Karla';
+    font-style: italic;
+    margin-top: 50px;
+    color:black;
+    font-size: 25px;
+    line-height: 35px;
+    width: 800px;
+}
+.content1{
+    margin-top: 70px;
+    display: inline-block;
+    flex-wrap: wrap;
+    text-align:center;
+}

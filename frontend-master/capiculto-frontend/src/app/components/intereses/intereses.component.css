@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400&display=swap');
+
+.intereses{
+    float: left;
+    margin-top: 30px;
+    margin-left: 70px;
+}
+.recomendaciones{
+    float: right;
+    margin-top: 30px;
+    margin-right: 70px;
+}
+
+div a{
+    color: black;
+    text-decoration: none;
+    line-height: normal;
+    font-family: 'Redressed';
+    font-size: 50px;
+    font-weight: 'regular';
+    text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.507);
+}
+.image{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+  }
+  .texto{
+    font-size: 15px;
+    font-family: 'Karla';
+    font-style: italic;
+  }
+  .titulo{
+    font-size: 21px;
+    font-weight: bold;
+    font-family: 'Redressed';
+    margin-bottom: 10px;
+  }
+  .button {
+    background-color: #E1D8CE;
+    color: black;
+    border: 1px solid black; /* Green */
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Redressed';
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+    margin-right: 10px;
+  }

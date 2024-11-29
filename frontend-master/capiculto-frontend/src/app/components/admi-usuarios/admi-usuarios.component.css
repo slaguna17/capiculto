@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400&display=swap');
+.contenedor{
+  padding: 20px 20px;
+  position:relative; 
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-family: 'Redressed';
+
+}
+
+.usuarios_grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  gap: 20px; 
+}
+
+.columna1{
+  display: flex;
+  gap: 100px;
+
+}
+.imagen img{
+  width: 200px;
+}
+.imagen {
+  padding: 20px;
+}
+
+.titulo_usuario{
+  display: flex;
+}
+.nombre_titulo{
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-family: 'Redressed';
+
+}
+.icono{
+  padding-top: 6px;
+  padding-right: 6px ;
+  width: 10px;
+  cursor: pointer;
+  
+
+}
+.icon{
+  width: 40px;
+  height: 40px;
+
+}
+.text_usuario{
+  cursor: default;
+  padding-top: 20px;
+}
+
+/* barra busqueda */
+.barra_busqueda{
+
+  gap: 20px;
+  width: 95%;
+  display: flex;
+  align-items: center;
+
+}
+.barra_busqueda .input{
+  flex: 1;
+  padding: 8px 0px;
+}
+.barra_busqueda .input input{
+  padding: 6px;
+  width: 100%;
+  border-width: 0.1px;
+  border: 1px solid #FF8000;
+  border-radius: 4px;
+
+}
+
+/* titulo  principal */
+.titulo{
+
+  font-size: 2.5rem;
+  font-weight: 600 ;
+
+}
+
+
+
+@media only screen and (min-width: 600px) {
+  .usuarios_grid{
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+}
+
+.button {
+  background-color: #FF7A00;
+  color: white;
+  border: 1px solid orangered; /* Green */
+  text-align: center;
+  font-family: 'Karla';
+  font-size: 16px;
+  height: 40px;
+}
+.button2 {
+  background-color: #E1D8CE;
+  color: black;
+  border: 1px solid black; /* Green */
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Redressed';
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+}
+.window-notice {
+  background: rgba(33, 41, 52, .85);
+  padding-top: 250px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  display: none;
+  position: fixed;
+  z-index: 999;
+}
+.window-notice .content {
+  background: #F2EEE9;
+  border-radius: 5px;
+  border: 2px solid #FF7A00;
+  box-shadow: 0 1px 3px rgba(33, 41, 52, .75);
+  box-sizing: content-box;
+  margin: auto;
+  max-width: 400px;
+  overflow: hidden;
+  width: 100%;
+  padding: 2rem;
+}
+.window-notice .titulo {
+  font-size: 24px;
+  font-family: 'Redressed'; 
+  color: #FF8000;
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: center;
+} 
+.window-notice .data {
+  display: flex;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  width: 300px;
+}
+.window-notice .text {
+  font-size: 20px;
+  font-family: 'Karla'; 
+  width: 90px;
+  color: black;
+  display: flex;
+  margin-right: 20px;
+}  
+.right{
+  float: right;
+}

@@ -1,0 +1,66 @@
+<body style="background: #F2EEE9;">
+    <div class="intereses">
+        <a>Tus eventos</a>
+        <div *ngFor="let evento of eventosInteres" style="margin-top: 50px; width: 654px; height: 200px;">
+            <div style="float: left;">
+                <img src="{{evento.imagen}}" width="253.61px" height="138px" />
+            </div>
+            <div style="float: right; margin-left: 10px;">
+                <div class="titulo"> {{evento.titulo}}</div>
+                <div class="texto" style="width: 380px;"> {{evento.descripcion}}</div>
+
+                <div style="float: right;"> 
+                    <div class="texto">Interesados: {{evento.num_interesados}}</div>
+                </div>
+                    
+                <div>
+                    <div style="float: left; margin-top: 20px;">
+                        <button class="button" (click)="redirigirLocacion(evento.locacion)">Ver Ubicacion</button>
+                    </div>
+                    <div style="float: right;">
+                        <a href= "{{evento.links[0]}}"  title="facebook_Link" target="_blank" *ngIf="evento.links[0] != 'null'">
+                        <img class="image" src="./assets/icons8-facebook-250.png" /></a>
+                        <a href= "{{evento.links[1]}}"  title="facebook_Link" target="_blank" *ngIf="evento.links[1] != 'null'">
+                        <img class="image" src="./assets/icons8-instagram-240.png" /></a>
+                        <a href= "{{evento.links[2]}}"  title="facebook_Link" target="_blank" *ngIf="evento.links[2] != 'null'">
+                        <img class="image" src="./assets/icons8-linkedin-250.png" /></a>
+                        <a href= "{{evento.links[3]}}"  title="facebook_Link" target="_blank" *ngIf="evento.links[3] != 'null'">
+                        <img class="image" src="./assets/icons8-twitter-squared-100.png" /></a>
+                    </div>
+                </div>
+            </div>
+            <div style="height: 30px; margin-top: 30px;"></div>
+        </div>
+    </div>
+    <div class="recomendaciones">
+        <a>Eventos que te pueden interesar</a>
+        <div *ngFor="let evento of eventosRecomendados" style="margin-top: 50px; width: 654px; height: 200px;">
+            <img style="float: left;" src="{{evento.imagen}}" width="253.61px" height="138px" />
+            <div style="float: right; margin-left: 20px;">
+                <div class="titulo"> {{evento.titulo}}</div>
+                <div class="texto" style="width: 380px;"> {{evento.descripcion}}</div>
+
+                <div style="float: right;"> 
+                    <div class="texto">Interesados: {{evento.num_interesados}}</div>
+                </div>
+                    
+                <div>
+                    <div style="float: left; margin-top: 20px;">
+                        <button class="button" (click)="redirigirLocacion(evento.locacion)">Ver Ubicacion</button>
+                        <button class="button" (click)="agregarUbicacion(evento)">Me interesa</button>
+                    </div>
+                    <div style="float: right;">
+                        <a href= "{{evento.links[0]}}"  title="facebook_Link" target="_blank" *ngIf="evento.links[0] != 'null'">
+                        <img class="image" src="./assets/icons8-facebook-250.png" /></a>
+                        <a href= "{{evento.links[1]}}"  title="facebook_Link" target="_blank" *ngIf="evento.links[1] != 'null'">
+                        <img class="image" src="./assets/icons8-instagram-240.png" /></a>
+                        <a href= "{{evento.links[2]}}"  title="facebook_Link" target="_blank" *ngIf="evento.links[2] != 'null'">
+                        <img class="image" src="./assets/icons8-linkedin-250.png" /></a>
+                        <a href= "{{evento.links[3]}}"  title="facebook_Link" target="_blank" *ngIf="evento.links[3] != 'null'">
+                        <img class="image" src="./assets/icons8-twitter-squared-100.png" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

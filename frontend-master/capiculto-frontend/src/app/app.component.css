@@ -1,0 +1,11 @@
+p {
+    font-family: Karla;
+  }
+  
+  mat-dialog-container {
+    background-color: #F2EEE9 !important;
+    border: 4px solid #FF8000 !important;
+    border-radius: 50px !important;
+    box-sizing: border-box !important;
+  }
+  

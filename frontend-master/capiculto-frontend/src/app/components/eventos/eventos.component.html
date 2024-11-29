@@ -1,0 +1,140 @@
+<div class="window-notice" id="Filtros_Interes">
+  <div class="content">
+    <div class="fila1">Intereses</div>
+    <div class="fila">
+      <label class="container"
+        >Musica
+        <input type="checkbox" [(ngModel)]="array_Filtros[0]" />
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="fila">
+      <label class="container"
+        >Cultura
+        <input type="checkbox" [(ngModel)]="array_Filtros[1]" />
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="fila">
+      <label class="container"
+        >Tecnologia
+        <input type="checkbox" [(ngModel)]="array_Filtros[2]" />
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="fila">
+      <label class="container"
+        >Educacion
+        <input type="checkbox" [(ngModel)]="array_Filtros[3]" />
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="fila">
+      <label class="container"
+        >Entretenimiento
+        <input type="checkbox" [(ngModel)]="array_Filtros[4]" />
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="fila1">
+      <button class="button" (click)="filtroMostrar()">Confirmar</button>
+    </div>
+  </div>
+</div>
+ 
+<div  class=" right"style="margin-top: 20px; margin-right: 40px; " id="agregar_evento" *ngIf="esAdmin">
+  <button
+    class="button3 right"
+    id="button_add_evento"
+    routerLink="/add-evento"
+    routerLinkActive="active-router">
+    + Agregar Evento
+  </button>
+</div>
+
+<div class="abs-center" style="margin-top: 60px;">
+
+  <div class="container_Evento">
+    <div class="left">
+      <button class="button2" (click)="filtroMostrar()">Filtros</button>
+    </div>
+    <div class="left">
+      <input type="text" name="fname" [(ngModel)]="texto_filtro" />
+    </div>
+    <div class="left">
+      <button type="button"  (click)="filtrarEventos()" style="border: none; background-color: white;" > 
+        <img  src="./assets/icons8-search-128.png" height ="35" width="35" /></button>  
+    </div>  
+  </div>
+</div>
+<div *ngFor="let evento of eventos_array">
+  <div class="abs-center">
+    <div class="container_Evento">
+      <div class="left">
+        <img src="{{ evento.imagen }}" width="450" height="250" />
+      </div>
+      <div class="descripcion">
+        <div class="titulo">{{ evento.titulo }}</div>
+        <div class="texto">{{ evento.descripcion }}</div>
+        <div class="hora_Fecha">
+          <div class="left">
+            <img class="image" src="./assets/icons8-time-100.png"/>
+          </div>
+          <div class="left">
+            <div class="texto_time"  >{{ evento.fecha }}</div>
+          </div>
+          <div class="left">
+            <img class="image" src="./assets/icons8-calendar-50.png"/>
+          </div>
+          <div class="left">
+            <div class="texto_time">{{ evento.hora }}</div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="texto">Interesados: {{ evento.num_interesados }}</div>
+        </div>
+
+        <div class="acciones_Eventos">
+          <div class="left">
+            <button class="button" (click)="buscarUbicacion(evento.locacion)">Ver Ubicacion</button>
+            <button class="button" (click)="eliminarEventoConfirmacion(evento._id)" *ngIf="esAdmin" >Eliminar</button>
+            <button class="button" (click)="agregarInteres(evento)"  *ngIf="puedeDarMeInteresa(evento._id)" >Me interesa</button>
+          </div>
+          <div class="right">
+            <a
+              href="{{ evento.links[0] }}"
+              title="facebook_Link"
+              target="_blank"
+              *ngIf="evento.links[0] != 'null'"
+            >
+              <img class="image" src="./assets/icons8-facebook-250.png"/></a>
+            <a
+              href="{{ evento.links[1] }}"
+              title="facebook_Link"
+              target="_blank"
+              *ngIf="evento.links[1] != 'null'"
+            >
+              <img class="image" src="./assets/icons8-instagram-240.png"
+            /></a>
+            <a
+              href="{{ evento.links[2] }}"
+              title="facebook_Link"
+              target="_blank"
+              *ngIf="evento.links[2] != 'null'"
+            >
+              <img class="image" src="./assets/icons8-linkedin-250.png"
+            /></a>
+            <a
+              href="{{ evento.links[3] }}"
+              title="facebook_Link"
+              target="_blank"
+              *ngIf="evento.links[3] != 'null'"
+            >
+              <img class="image" src="./assets/icons8-twitter-squared-100.png"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

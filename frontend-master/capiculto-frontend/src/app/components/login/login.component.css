@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200&family=Redressed&display=swap%22");
+@import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap%22");
+
+h2 {
+  text-align: center;
+  font-family: "Redressed";
+  font-size: 40px;
+}
+
+.input {
+  text-align: center;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  border: none;
+  font-family: "Teko";
+  border-color: none;
+  outline: none;
+  width: 100%;
+  font-size: 30px;
+}
+
+div {
+  background: #fcaf03;
+  padding: 50px;
+}
+
+.close {
+  float: right;
+  padding-left: 250px;
+}
+img {
+  display: block;
+  left: auto;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+button {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  color: rgb(240, 236, 243);
+
+  background-color: #ff8000;
+  border: none;
+  margin-top: 20px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 40px;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  color: rgb(240, 236, 243);
+
+  background-color: #4a138c;
+  border: none;
+  margin-top: 20px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 40px;
+  opacity: 0.8;
+}
+
+
+
+
+.inputError {
+  text-align: center;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: "Teko";
+  outline-color: red;
+  width: 100%;
+  font-size: 30px;
+}
+
+.inputError::placeholder {
+  color: red;
+}

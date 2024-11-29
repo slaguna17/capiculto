@@ -1,0 +1,66 @@
+<div class="modal-body">
+  <input
+    type="image"
+    class="close"
+    alt="cerrar"
+    src="../../../assets/icons8-close-24.png"
+    (click)="closeDialog()"
+  />
+  <h1>Registrate</h1>
+  <form style="height: fit-content;" (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <h2>Nombre</h2>
+    <input
+      type="text"
+      placeholder="Nombre"
+      name="nombre"
+      class="input"
+      id="nombre"
+      [(ngModel)]="nombre"
+      required
+    />
+    <h2>Username</h2>
+    <input
+      class="input"
+      id="username"
+      name="username"
+      type="text"
+      placeholder="Username"
+      [(ngModel)]="username"
+      required
+    />
+    <h2>Correo Electronico</h2>
+    <input
+      class="input"
+      id="correo"
+      name="correo"
+      type="email"
+      placeholder="Email"
+      [(ngModel)]="correo"
+      required
+    />
+    <h2>Contraseña</h2>
+    <input
+      class="input"
+      id="passInput"
+      name="pass"
+      type="password"
+      placeholder="Contraseña"
+      [(ngModel)]="password"
+    />
+    <h2>Confirmar Contraseña</h2>
+    <input
+      type="password"
+      class="input"
+      placeholder="Repeat Password"
+      name="psw-repeat"
+      id="psw-repeat"
+      [(ngModel)]="repeatPassword"
+      required
+    />
+    <button type="submit">Ingresar</button>
+    
+      <img class="logo" src="../../../assets/logo-capiculto.png" />
+    
+    
+  </form>
+</div>

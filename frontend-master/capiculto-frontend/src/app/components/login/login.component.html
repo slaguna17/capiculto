@@ -1,0 +1,34 @@
+<div>
+  <input
+    type="image"
+    class="close"
+    alt="cerrar"
+    src="../../../assets/icons8-close-24.png"
+    (click)="closeDialog()"
+  />
+  <img src="../../../assets/logo-capiculto.png" />
+
+  <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <h2>Usuario</h2>
+    <input
+      class="input"
+      id="userInput"
+      name="user"
+      type="text"
+      placeholder="Correo Electronico"
+      [(ngModel)]="correoForm"
+    />
+
+    <h2>Contraseña</h2>
+    <input
+      class="input"
+      id="passInput"
+      name="pass"
+      type="password"
+      placeholder="Contraseña"
+      [(ngModel)]="passForm"
+    />
+
+    <button type="submit">Ingresar</button>
+  </form>
+</div>

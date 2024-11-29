@@ -1,0 +1,48 @@
+<body>
+    <div class="contenedor">
+        <div class="usuarios_grid">
+            <div *ngFor="let locacion of locaciones_array" >
+
+                <div class="columna1">
+                    <!-- imagen -->
+                    <div class="imagen">
+                        <img src="{{ locacion.imagen }}" alt="imagen no siponible" width="250" >
+                    </div>
+                    <!-- texto -->
+                    <div class="text_usuario">
+                        <!-- nombre -->
+                        <div class="titulo_usuario">
+                            <div class="nombre_titulo">
+                                {{locacion.nombre}}
+                            </div>
+                        </div>
+                        <!-- correo -->
+                        <div class ="texto">
+                            {{locacion.contacto}}
+                        </div>
+                        <div class ="texto">
+                            {{locacion.email}}
+                        </div>
+                        <div class="acciones_Eventos">
+                            <!-- botones -->
+                            <div>
+                                <button class="button" (click)="buscarUbicacion(locacion)">Ver Ubicacion</button>
+                            </div>
+                            <div>
+                             
+                                <button class="button" 
+                                (click)="verEvento(locacion._id)"
+                                (click)="changeState('eventos')"
+                                routerLink="/eventos"
+                                routerLinkActive="active-router">Ver Evento</button>
+                                
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>          
+        </div>
+    </div>
+</body>
+

@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200&family=Redressed&display=swap%22");
+@import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap%22");
+
+.modal-body {
+  width: 550px;
+  max-height: calc(100vh - 10px);
+  overflow-y: auto;
+  padding-bottom: 5px;
+}
+h1 {
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 8%;
+  text-align: center;
+  font-family: "Redressed";
+  font-size: 70px;
+  color: rgb(240, 236, 243);
+}
+
+.logo {
+  position: relative;
+  float: "right";
+  margin-top: -50px;
+  width: 150px;
+  height: auto;
+  right: 1px;
+  bottom: 1px;
+}
+h2 {
+  text-align: center;
+  font-family: "Redressed";
+  font-size: 40px;
+}
+
+.input {
+  text-align: center;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  border: none;
+  font-family: "Karla";
+  border-color: none;
+  outline: none;
+  width: 100%;
+  font-size: 30px;
+}
+input:required {
+  outline: 1px solid red;
+}
+.close {
+  float: right;
+  padding-left: 250px;
+}
+
+div {
+  background: #fcaf03;
+  padding: 50px;
+}
+
+button {
+  display: block;
+  height: 80px;
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  color: rgb(240, 236, 243);
+
+  background-color: #ff8000;
+  border: none;
+  margin-top: 20px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Karla";
+  font-weight: bold;
+  border-radius: 40px;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  color: rgb(240, 236, 243);
+
+  background-color: #4a138c;
+  border: none;
+  margin-top: 20px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 40px;
+  opacity: 0.8;
+}
+
+mat-dialog-container {
+  background-color: #ff8000 !important;
+  border-radius: 50px !important;
+}
+
+.inputError {
+  text-align: center;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: "Teko";
+  outline-color: red;
+  width: 100%;
+  font-size: 30px;
+}
+
+.inputError::placeholder {
+  color: red;
+}

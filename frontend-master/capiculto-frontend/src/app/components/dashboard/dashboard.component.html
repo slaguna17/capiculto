@@ -1,0 +1,70 @@
+<header>
+  <div class="wrapper">
+    <img
+      style="position: absolute; left: -24px; top: -108px"
+      src="./assets/logo-capiculto.png"
+      width="337px"
+      height="271px"
+    />
+    <nav class="nav3">
+      <a *ngIf="!isUserLogin" (click)="openDialogLog()">Inicio de sesión</a>
+
+      <a *ngIf="!isUserLogin" (click)="openDialogSign()">Registro</a>
+    </nav>
+
+    <div class="logo">Capiculto</div>
+
+    <nav class="nav1">
+      <a
+        id="inicio"
+        (click)="changeState('inicio')"
+        routerLink="inicio"
+        routerLinkActive="active-router"
+        >Inicio</a
+      >
+      <a
+        id="eventos"
+        (click)="changeState('eventos')"
+        routerLink="eventos"
+        routerLinkActive="active-router"
+        >Eventos</a
+      >
+      <a
+        id="locaciones"
+        (click)="changeState('locaciones')"
+        href="#"
+        routerLink="locaciones"
+        routerLinkActive="active-router"
+        >Locaciones</a
+      >
+
+      <a
+        *ngIf="isUserLogin && !usuario?.esAdmin"
+        id="intereses"
+        (click)="changeState('intereses')"
+        href="#"
+        routerLink="intereses"
+        routerLinkActive="active-router"
+        >Intereses</a
+      >
+      <a
+        *ngIf="isUserLogin && usuario?.esAdmin"
+        id="admi-usuarios"
+        (click)="changeState('admi-usuarios')"
+        href="#"
+        routerLink="admi-usuarios"
+        routerLinkActive="active-router"
+        >Usuarios</a
+      >
+     
+
+    </nav>
+
+    <nav class="nav2" *ngIf="isUserLogin">
+      <p class="texto" style="text-decoration-line: underline" >{{ username }}</p>    
+      <a (click)="desloguear()">Cerrar Sesion</a>
+    </nav>
+    
+    
+  </div>
+</header>

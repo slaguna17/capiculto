@@ -1,0 +1,63 @@
+<div style="background-color:#E1D8CE;">
+  <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <div class="container">
+      <h1>Comparte un nuevo evento!</h1>
+      <p class="p1">Rellena la informacion sobre el evento que deseas añadir.</p>
+      <hr>
+      <div class="advertencia">*Los campos marcados en naranja son obligatorios </div>
+      <input class="titulo" type="text" [(ngModel)]="titulo" placeholder="Escribe tu titulo" name="titulo" id="titulo" required>
+      <div class="abuelo">
+        <div class="padre1">
+          <img class ="imagen" src="{{imimg()}}" />
+          <label for="imagen"><b>Provee un link para tu imagen</b></label>
+          <input class="contactos" type="text" [(ngModel)]="imagen" placeholder="Link imagen" name="imagen" id="imagen" >
+        </div>
+
+        <div class="padre2">
+            <input class="descripcion" type="text" [(ngModel)]="descripcion" placeholder="Ingresa la descripcion del evento" name="descripcion" id="descripcion" required>
+            <div class="linea1">
+              <label  for="fecha">Fecha</label>
+              <input class="fecha" type="date" [(ngModel)]="fecha" placeholder="Fecha" id="fecha" name="fecha" min="2022-01-01" required >
+                <label  for="categoria">Categoria</label>
+                <select class="categoria" name="categoria" id="categoria" [(ngModel)]="categoria" required="value">
+                  <option [value]="">--Selecciona una categoria--</option>
+                  <option [value]="'musica'">Musica</option>
+                  <option [value]="'cultura'">Cultura</option>
+                  <option [value]="'tecnologia'">Tecnologia</option>
+                  <option [value]="'educacion'">Educacion</option>
+                  <option [value]="'entretenimiento'">Entretenimiento</option>
+                </select>
+            </div>
+            <div class="linea2">
+              <label for="hora">Hora</label>
+              <input class="hora" type="time" [(ngModel)]="hora" id="hora" name="hora" required>
+              <label for="locacion"><b>Locacion</b></label>
+                <select name="locacion" class="locacion" id="locacion" [(ngModel)]="locacion" required="value">
+                  <option value="">--Ingresa el lugar del evento--</option>
+                    <option *ngFor="let locacion1 of locaciones_array" [value]="locacion1._id">{{locacion1.nombre}}</option>
+                </select>
+            </div>
+        </div>
+      </div> 
+      
+        <h2>Contactos</h2> 
+      <div class="social">
+        <label for="fb"><b>Facebook</b></label>
+        <input class="contactos" type="text" [(ngModel)]="fb" placeholder="Link Facebook" name="fb" id="fb" >
+
+        <label for="tw"><b>Twitter</b></label>
+        <input class="contactos"type="text" [(ngModel)]="tw" placeholder="Link Twitter" name="tw" id="tw" >
+
+        <label for="ig"><b>Instagram</b></label>
+        <input class="contactos"type="text" [(ngModel)]="ig" placeholder="Link Instagram" name="ig" id="ig" >
+
+        <label for="lk"><b>Linkedin</b></label>
+        <input class="contactos" type="text" [(ngModel)]="lk" placeholder="Link Linkedin" name="lk" id="lk" >
+      </div>
+        <hr>
+      
+      <p class="p2">Creando un evento en nuestra pagina esta aceptando nuestros: <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Terminos y condiciones</a>.</p>
+      <button class="crearEvento" type="submit">Crear evento</button>
+    </div>
+  </form>
+</div>

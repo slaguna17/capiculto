@@ -1,0 +1,17 @@
+<div style="float: center;display: flex; align-items: center; justify-content: center; min-height: 10vh;">
+    <div class="content1" >
+        <h1 class="titulo">
+            Capiculto
+        </h1>
+        <p class="texto">
+            Encuentra tus eventos favoritos, en base a tus preferencias y tus lugares favoritos. Inicia Sesion o Resigistrate para tener tu lista de eventos a los que quieras asistir.
+        </p>
+    </div>
+</div>
+<div class="content">
+    <div *ngFor="let publicacion of publicidad" >
+        <a href="{{publicacion.link}}">
+            <img src="{{publicacion.imagen}}" class="image" width="650px" height="auto">
+        </a>
+    </div>
+</div>

@@ -1,0 +1,72 @@
+<body>
+    <div class="window-notice" id="Crear_admin">
+        <div class="content"> 
+            <div class="right">
+                <button type="button"  (click)="crearAdminMostrar()" style="border: none; background-color: #F2EEE9;" > 
+                    <img  src="./assets/icons8-close-24.png" height ="25" width="25" /></button>
+            </div>
+            <div class="titulo">
+                Crear Administrador
+            </div>
+            <div class="data"> 
+                <div class="text">Correo:</div>
+                <input type="text" [(ngModel)]="correo_Usuario" >
+            </div>
+            <div class="data"> 
+                <div class="text">Username:</div>
+                <input type="text" [(ngModel)]="username_Usuario" >
+            </div>
+            <div class="titulo">
+                <button class="button2" (click)="convertirUser()">Confirmar</button>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor">
+
+            <div class="barra_busqueda">
+                <div>
+                    <button (click)="crearAdminMostrar()" class="button">+Crear Nuevo Administrador</button>
+                </div>
+                <div class="input">
+                    <input type="text" [(ngModel)]="filtro_Username">
+                </div>
+                <div class="icono">
+                    <button type="button"  (click)="filtrarXUsername()" style="border: none; background-color: white;" > 
+                        <img  src="./assets/icons8-search-128.png" height ="40" width="40" /></button>
+                </div>
+            </div>
+            <div class="titulo">
+                {{titulo_Usuarios}}
+            </div>
+    </div>
+
+    <div class="usuarios_grid">
+        <div *ngFor="let usuario of usuAdmi_array">
+            <div class="columna1">
+                <!-- imagen -->
+                <div class="imagen">
+                    <img src="{{ imagen_Usuario }}" alt="Imagen no disponible">
+                </div>
+                <!-- texto -->
+                <div class="text_usuario">
+                    <!-- nombre -->
+                    <div class="titulo_usuario">
+                        <div class="nombre_titulo">
+                            {{usuario.username}}
+                        </div>
+                        <!-- eliminar usuario -->
+                        <div class="icono">
+                            <button type="button"  (click)="quitarUsuarioAdmin(usuario._id)" style="border: none; background-color: white;" > 
+                                <img  src="./assets/icons8-delete-200.png" height ="40" width="40" /></button>
+                        </div>
+                    </div>
+                    <!-- correo -->
+                    <div>
+                        {{usuario.correo}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
